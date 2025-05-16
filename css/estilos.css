@@ -7,18 +7,29 @@
     font-family: 'Roboto';
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color:rgb(0, 0, 0);
+    text-decoration: underline;
+    filter: drop-shadow(2px 2px 4px black);
+}
+
 .encabezado {
-    border: 1px solid black;
+    
     grid-area: encabezado;
 }
 
 .principal {
-    border: 1px solid black;
+   
     grid-area: principal;
 }
 
 .pie {
-    border: 1px solid black;
+    
     grid-area: pie;
 }
 
@@ -73,11 +84,44 @@
     margin: 20px;
 }
 
-.principal h2 {
+.principal .titulo-servicios {
     text-align: center;
     padding-top: 50px;
 }
 
+/*quienes somos*/
+.principal5 {
+    grid-area: principal5;
+}
+
+.principal6 {
+    grid-area: principal6;
+}
+
+.contenedor3 img {
+    width: 500px;
+    height: 300px;
+}
+
+.contenedor3 p {
+    text-align: justify;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* seccion contacto*/
+
+.principal7 {
+    grid-area: principal7;
+}
+
+.principal8 {
+    grid-area: principal8;
+}
+
+.principal8 h2, .principal8 h3 {
+    text-align: left;
+}
 
 
 @media (min-width: 500px) {
@@ -102,6 +146,28 @@
         grid-template-areas: "principal2 principal3 principal4";
     }
 
+    .contenedor3 {
+        display: grid;
+        text-align: center;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 80dvh;
+        margin-left: 80px;
+        margin-right: 80px;
+        gap: 50px;
+        grid-template-areas: "principal5 principal6";
+    }
+
+    .contenedor4 {
+        display: grid;
+        text-align: center;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 80dvh;
+        margin-left: 80px;
+        margin-right: 80px;
+        gap: 50px;
+        grid-template-areas: "principal7 principal8";
+    }
+
     
 }
 
@@ -114,6 +180,36 @@
         grid-template-areas: "encabezado"
             "principal"
             "pie";
+    }
+
+    .principal2, .principal4, .principal3   {
+        box-shadow: 1px 1px 3px  black;
+        gap: 10px
+    }
+    
+    .principal2 h3, .principal4 h3, .principal4 h3 {
+        text-align: center;
+    }
+
+
+
+    .contenedor3 {
+        display: grid;
+        text-align: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 10px;
+        grid-template-areas: "principal5" 
+        "principal6";
+    }
+
+    .contenedor3 img {
+        width: 300px;
+        height: 100px;
+    }
+
+    .contenedor3 p {
+        text-align: justify;
     }
 
     .principal h2 {
