@@ -34,15 +34,47 @@
     line-height: 1px;
 }
 
+/* seccion servicios*/
+.principal2 {
+    border: 1px solid black;
+    grid-area: principal2;
+}
+
+.principal3 {
+    border: 1px solid black;
+    grid-area: principal3;
+}
+
+.principal4 {
+    border: 1px solid black;
+    grid-area: principal4;
+}
+
+.principal2 img, .principal3 img, .principal4 img   {
+    height: auto;
+    padding-bottom: 20px;
+}
+
 @media (min-width: 500px) {
     .contenedor {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: auto auto 10dvh;
+        grid-template-rows: auto 100dvh 10dvh;
         gap: 10px;
         grid-template-areas: "encabezado"
             "principal"
             "pie";
+    }
+
+    .contenedor2 {
+        display: grid;
+        text-align: center;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 90dvh;
+        margin-left: 80px;
+        margin-right: 80px;
+        gap: 50px;
+        grid-template-areas: "principal2 principal3 principal4";
     }
 
     
@@ -51,12 +83,12 @@
 @media (max-width: 500px) {
     .contenedor {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         grid-template-rows: auto auto 10dvh;
         gap: 10px;
-        grid-template-areas: "encabezado encabezado"
-            "principal principal"
-            "pie pie";
+        grid-template-areas: "encabezado"
+            "principal"
+            "pie";
     }
 
     .principal h2 {
