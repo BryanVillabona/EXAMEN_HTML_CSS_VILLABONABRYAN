@@ -1,0 +1,72 @@
+.encabezado {
+    border: 1px solid black;
+    grid-area: encabezado;
+}
+
+.principal {
+    border: 1px solid black;
+    grid-area: principal;
+}
+
+.pie {
+    border: 1px solid black;
+    grid-area: pie;
+}
+
+.logo-nav {
+    display: block;
+    justify-content: center;
+}
+
+.navegacion h3 {
+    display: block;
+    text-align: end;
+    line-height: 1px;
+}
+
+.principal img {
+    width: 100%;
+    padding-bottom: 100px;
+}
+
+.principal h2 {
+    text-align: center;
+    line-height: 1px;
+}
+
+@media (min-width: 500px) {
+    .contenedor {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 10dvh;
+        gap: 10px;
+        grid-template-areas: "encabezado"
+            "principal"
+            "pie";
+    }
+
+    
+}
+
+@media (max-width: 500px) {
+    .contenedor {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto 10dvh;
+        gap: 10px;
+        grid-template-areas: "encabezado encabezado"
+            "principal principal"
+            "pie pie";
+    }
+
+    .principal h2 {
+        text-align: center;
+        line-height: 1px;
+        font-size: 14px;
+    }
+
+    .principal img {
+        width: 100%;
+        padding-bottom: 20px;
+    }
+}
