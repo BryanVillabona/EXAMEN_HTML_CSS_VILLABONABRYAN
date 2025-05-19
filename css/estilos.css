@@ -13,35 +13,37 @@ a {
 }
 
 a:hover {
-    color:rgb(0, 0, 0);
-    text-decoration: underline;
-    filter: drop-shadow(2px 2px 4px black);
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    filter: drop-shadow(0px 5px 1px rgb(172, 172, 172));
 }
 
 .encabezado {
-    
+
     grid-area: encabezado;
 }
 
 .principal {
-   
+
     grid-area: principal;
 }
 
 .pie {
-    
+
     grid-area: pie;
 }
 
-.logo-nav {
-    display: block;
-    justify-content: center;
+.logo-nav .navegacion {
+    display: flex;
+    
+    align-items: flex-end;
 }
 
-.navegacion h3 {
-    display: block;
-    text-align: end;
-    line-height: 1px;
+.logo-nav .navegacion .menu {
+
+    display: flex;
+    width: 100%;
+    justify-content: end;
 }
 
 .principal img {
@@ -56,29 +58,39 @@ a:hover {
 
 /* seccion servicios*/
 .principal2 {
-    
-    box-shadow: 0px 0px 40px  black;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 2px 5px 1px rgb(187, 187, 187);
     grid-area: principal2;
 }
 
 .principal3 {
-    
-    box-shadow: 0px 0px 40px  black;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 2px 5px 1px rgb(187, 187, 187);
     grid-area: principal3;
 }
 
 .principal4 {
-    
-    box-shadow: 0px 0px 40px  black;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 2px 5px 1px rgb(187, 187, 187);
     grid-area: principal4;
 }
 
-.principal2 img, .principal3 img, .principal4 img   {
+.principal2:hover,
+.principal3:hover,
+.principal4:hover {
+    transform: scale(1.02);
+}
+
+.principal2 img,
+.principal3 img,
+.principal4 img {
     height: auto;
     padding-bottom: 20px;
 }
 
-.principal2 p, .principal3 p, .principal4 p {
+.principal2 p,
+.principal3 p,
+.principal4 p {
     font-weight: bold;
     text-align: justify;
     margin: 20px;
@@ -99,8 +111,8 @@ a:hover {
 }
 
 .contenedor3 img {
-    width: 500px;
-    height: 300px;
+    width: 300px;
+    height: 200px;
 }
 
 .contenedor3 p {
@@ -116,11 +128,32 @@ a:hover {
 }
 
 .principal8 {
+    display: flex;
+    flex-direction: column;
+    height: 80%;
     grid-area: principal8;
 }
 
-.principal8 h2, .principal8 h3 {
+.principal8 h2,
+.principal8 h3 {
     text-align: left;
+}
+
+.principal7 img {
+    width: 70%;
+    height: 70%;
+}
+
+.barra {
+    margin-bottom: 65px;
+}
+
+.barra2 {
+    align-items: flex-end;
+    text-align: left;
+    padding: 1%;
+    width: 60%;
+    background: linear-gradient(to right, rgb(219, 219, 219), blue);
 }
 
 
@@ -167,8 +200,6 @@ a:hover {
         gap: 50px;
         grid-template-areas: "principal7 principal8";
     }
-
-    
 }
 
 @media (max-width: 500px) {
@@ -182,16 +213,25 @@ a:hover {
             "pie";
     }
 
-    .principal2, .principal4, .principal3   {
-        box-shadow: 1px 1px 3px  black;
+    .principal2,
+    .principal4,
+    .principal3 {
+        box-shadow: 1px 1px 3px black;
         gap: 10px
     }
-    
-    .principal2 h3, .principal4 h3, .principal4 h3 {
+
+    .principal2 h3,
+    .principal4 h3,
+    .principal4 h3 {
         text-align: center;
     }
 
-
+    .encabezado {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 
     .contenedor3 {
         display: grid;
@@ -199,8 +239,16 @@ a:hover {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         gap: 10px;
-        grid-template-areas: "principal5" 
-        "principal6";
+        grid-template-areas: "principal5"
+            "principal6";
+    }
+
+    .contenedor4 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "principal7"
+            "principal8";   
     }
 
     .contenedor3 img {
@@ -222,4 +270,25 @@ a:hover {
         width: 100%;
         padding-bottom: 20px;
     }
+
+    .logo-nav .navegacion {
+        display: flex;
+        border: 1px solid black;
+        align-items: flex-end;
+    }
+
+    .principal8 {
+        margin: 20px;
+
+        grid-template-areas: "principal7"
+            "principal8";
+    }
+
+    .principal8 h2 {
+        text-align: left;
+    }
+
+    .principal7 {
+    margin: 5px;
+}
 }
